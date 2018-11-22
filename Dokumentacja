@@ -2,4 +2,4 @@ Wprowadzenie
 
 Crowd pressure oznacza sytuację, w której w ograniczonej przestrzeni znajduje się tłum, który próbuje stamtąd wyjść. Wąskie przejścia powodują duże ciśnienia w tłumie. Jest to problematyczna sytuacja, ponieważ przy tych wąskich przejściach często dochodzi do sytuacji, gdzie ruch jest mały. Istnieją różne warianty przestrzeni, takie jak: przejście z kolumną pośrodku redukującą siły, przejście przez wąskie drzwi między dwoma pomieszczeniami i inne.
 
-Modelem (nie jedynym), dzięki któremu można będzie przeprowadzić symulację, jest Social Force. Zakłada on, że pieszy podejmuje decyzję, w którym kierunku ma iść głównie na podstawie tego, co w danej chwili widzi, ale także innych bodźców, jak słuch.
+Modelem do tego problemu mógłby być taki, w którym pieszy podejmuje decyzję, w którym kierunku ma iść głównie na podstawie tego, co w danej chwili widzi, ale także innych bodźców, jak słuch. Na podstawie bodźców wybiera drogę taką samą jak większość lub taką, którą byłoby najszybciej dojść do celu.
