@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="447847d7-a75c-4390-bcc4-6d6755e9d539" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CrowdPressure/CalcEngine/PedestrianCalc.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/CrowdPressure/Exceptions/Exc1.java" />
       <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -259,6 +257,14 @@
       <updated>1544745793010</updated>
       <workItem from="1544745799223" duration="3222000" />
     </task>
+    <task id="LOCAL-00001" summary="Little update">
+      <created>1544819259302</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544819259302</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -303,7 +309,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Proponowana architektura systemu + wprowadzenia do planu działania" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proponowana architektura systemu + wprowadzenia do planu działania" />
+    <MESSAGE value="Little update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
