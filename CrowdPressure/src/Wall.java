@@ -5,11 +5,12 @@ public class Wall implements Obstacle {
     private double length;
 
 
-    public Wall(Point _start, Point _end){
-        this.start = _start;
-        this.end = _end;
-        this.length = _start.distance(_end);
+    public Wall(Point p1, Point p2){
+        this.start = p1;
+        this.end = p2;
+        this.length = p1.distance(p2);
     }
+
 
 
 }
