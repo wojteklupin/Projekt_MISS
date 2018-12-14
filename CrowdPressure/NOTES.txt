@@ -1,0 +1,35 @@
+## Notatki
+
+Robimy refactor, więc trzymajmy się konwencji zmieniając nazwy i ewentualnie podziały między plikami.
+Możemy też napisać funkcjonalności po swojemu jak ktoś chce, ale trzymajmy się jakiegoś szablonu.
+
+
+Podstawowe nazewnictwo zmieniamy. Pedestrian -> Human
+
+Sciezki i nazwy plikow:
+model -> Handlers
+calculators -> CalcEngine
+builders -> GUI/BoardBuilders
+MapFactory -> MapBuilder
+PedestriansFactory -> HumanBuilder
+Map -> Board
+StraightWall&Wall do jednego pliku -> Wall
+Wszystko z katalogu Pedestrian do dwóch plików (Pedestrain) -> Human i trzy pliki xxxInformation -> HumanValues
+Wszystko co w katalogu model trzeba jakoś zrobić - ktoś ma pomysł jak to fajnie podzielić?
+Configuration i Initializer do jednego pliku -> RunConfig, gdzie ustawiamy zmienne, tworzymy mape, humana i engine
+Mam wrażenie, że nasz obiekt opierania się jest nieco zjebany, ale niech ktoś mnie oceni w tym podejściu prosze:
+Np. w Environment są settery i gettery Pedestriana? W Engine są settery i gettery Environment? To ma sens?
+
+Nie wiem co zrobić z Symulation, ale to rozkminie przy robieniu GUI, bo to raczej do GUI idzie.
+
+To co Kuba napisał w Human, trzeba imo przenieść do HumanValues (adekwatnie do refaktorowanego przez nas repo)
+
+
+Task start: DestinationDistanceCalc, PedestrianCalc, CollisionDistanceCalc, PedestrianCrossPointsCalc
+Task dwa: BoardBuildery, RunConfig (Configuration & Initializer), Handlery do Human i HumanValues + Environment + Position
+Task trzy: Reszta kalkulatorów + adekwatnie aktualizowanie modeli i reszty plików
+
+Dalej to już adekwatnie. Jeśli zrobicie coś w weekend (a na to liczę, bo jak nic nie zrobicie, to będziemy w dupie. I to czarnej. Bardzo czarnej.),
+to zajmę się zrobieniem GUI (okno + obsługa okna + wygląd).
+
+Trzymam kciuki Panowie.

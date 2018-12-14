@@ -1,4 +1,8 @@
-public class Wall implements Obstacle {
+package CrowdPressure.Handlers;
+
+import CrowdPressure.Point;
+
+public class Wall {
 
     private Point start;
     private Point end;

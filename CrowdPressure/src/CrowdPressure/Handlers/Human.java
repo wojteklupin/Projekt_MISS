@@ -1,4 +1,8 @@
-public class Pedestrian{
+package CrowdPressure.Handlers;
+
+import CrowdPressure.Point;
+
+public class Human {
 
     private double mass;
     private double velocity;
@@ -7,7 +11,7 @@ public class Pedestrian{
     final private Point destination;
     final private double radius = this.mass / 320;
 
-    public Pedestrian(double m, double v, Point d){
+    public Human(double m, double v, Point d){
 
         this.desiredVelocity = v;
         this.mass = m;
