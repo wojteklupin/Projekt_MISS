@@ -39,7 +39,7 @@ public class Human {
 
         for(Human human : this.board.getHumans()){
 
-            if(Geometry.inside(this.currentPosition, this.currentDestination, this.angleOfView, human.getCurrentPosition())){
+            if(Geometry.pointInside(this.currentPosition, this.currentDestination, this.angleOfView, human.getCurrentPosition())){
                 humansNearby.add(human);
             }
         }
