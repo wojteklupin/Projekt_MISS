@@ -10,7 +10,7 @@ public class Geometry {
     }
 
     //calculates distance between line determined by points a and b and point p
-    public double segmentDistanceFromPoint(Point a, Point b, Point p) {
+    public static double segmentDistanceFromPoint(Point a, Point b, Point p) {
 
         double x0 = p.getX();
         double y0 = p.getY();
