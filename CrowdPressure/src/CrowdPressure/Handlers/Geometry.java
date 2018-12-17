@@ -96,6 +96,7 @@ public class Geometry {
     public static boolean lineInside(Point center, Point direction, Double alpha, Point start, Point end) {
         return Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, rotatePoint(direction, alpha, 1), start, end)) ||
                 Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, rotatePoint(direction, alpha, -1), start, end)) ||
-                Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, direction, start, end));
+                Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, direction, start, end)) || Geometry.pointInside(center, direction, alpha, start) ||
+                Geometry.pointInside(center, direction, alpha, end );
     }
 }
