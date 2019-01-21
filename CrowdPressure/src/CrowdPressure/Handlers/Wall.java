@@ -13,6 +13,11 @@ public class Wall {
         this.end = end;
         this.length = start.distance(end);
     }
+    @Override
+    public String toString(){
+        return "Wall: \nStart: (" + Double.toString(this.start.getX()) + ", " + Double.toString(this.start.getY()) + "), End: (" + Double.toString(this.end.getX()) + ", "
+                + Double.toString(this.end.getY()) + ")\n";
+    }
 
     public double getLength() {
         return length;
