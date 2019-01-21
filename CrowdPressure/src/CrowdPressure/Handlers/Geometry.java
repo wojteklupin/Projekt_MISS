@@ -42,12 +42,12 @@ public class Geometry {
     public static boolean pointInside(Point center, Point direction, Double alpha, Point p) {
         double a = center.distance(direction);
         double b = center.distance(p);
-        double c = center.distance(p);
-        if (b > c) {
+        double c = direction.distance(p);
+        if (b > a) {
             return false;
         } else {
-            double cos = (Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / 2 * a * b; //transformed formula from law of cosines
-            return Math.acos(cos) < alpha;
+            double cos = (Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b); //transformed formula from law of cosines
+            return Math.acos(cos) <= alpha;
         }
     }
 
@@ -86,16 +86,30 @@ public class Geometry {
 
 //rotates point p by angle in  direction ( direction should be 1 (clockwise) or -1 (opposite)
     public static Point rotatePoint(Point p, double angle, int direction){
-        double x = p.getX() * Math.cos(direction) + direction * p.getY() * Math.sin(direction);
-        double y = p.getY() * Math.cos(direction) + p.getX() * Math.sin(direction);
+        double x = p.getX() * Math.cos(angle) + p.getY() * Math.sin(angle);
+        double y = p.getY() * Math.cos(angle) - direction * p.getX() * Math.sin(angle);
         return new Point(x, y);
+    }
+
+    public static Point rotatePointAround(Point p, Point central, double angle){
+
+        double px = p.getX() - central.getX();
+        double py = p.getY() - central.getY();
+
+        double x = px * Math.cos(angle) - py * Math.sin(angle);
+        double y = py * Math.cos(angle) + px * Math.sin(angle);
+
+        return new Point(x + central.getX(), y + central.getY());
+
     }
 
     //checks if any part of line segment is placed inside circle, center is center of the circle, direction is straight point from the center and alpha is an angle in both directions
     //start and end are vertices of line segment
     public static boolean lineInside(Point center, Point direction, Double alpha, Point start, Point end) {
-        return Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, rotatePoint(direction, alpha, 1), start, end)) ||
-                Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, rotatePoint(direction, alpha, -1), start, end)) ||
+        return Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, rotatePoint(direction, alpha, 1), start, end)) &&
+                Geometry.contains(start,end, Geometry.pointOfCrossing(center, rotatePoint(direction, alpha, 1), start, end)) ||
+                Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, rotatePoint(direction, alpha, -1), start, end)) &&
+                        Geometry.contains(start,end, Geometry.pointOfCrossing(center, rotatePoint(direction, alpha, -1), start, end)) ||
                 Geometry.pointInside(center, direction, alpha, pointOfCrossing(center, direction, start, end)) || Geometry.pointInside(center, direction, alpha, start) ||
                 Geometry.pointInside(center, direction, alpha, end );
     }
