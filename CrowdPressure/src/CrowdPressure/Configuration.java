@@ -34,6 +34,6 @@ public class Configuration {
    // public static final Symulation SYMULATION_TYPE = Symulation.SYM_PX_VS_PX_W0;
     public static final int SCALE_VALUE = 10;
     public static final boolean SHOW_VISION_RADIUS = true;
-    public static final int INITIAL_FPS = 70;
+    public static final int INITIAL_FPS = 90;
 
 }

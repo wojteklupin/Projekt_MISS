@@ -1,7 +1,6 @@
 package CrowdPressure.GUI;
 
 import CrowdPressure.*;
-//import CrowdPressure.Simulation;
 import CrowdPressure.model.Board;
 import CrowdPressure.model.map.Wall;
 import CrowdPressure.model.pedestrian.Human;
@@ -28,21 +27,16 @@ import java.util.*;
 
 public class WindowController implements Initializable {
 
-    private static final double COLOR_OPACITY = 1.0;
-    private static final double COLOR_BLUE = 0.0;
-
     private int count=0;
     private int fps;
     private MapBuilder simBuilder = new MapBuilder();
-    private int scaleValue;
     private Point destination;
     private Board map;
     private String simChosen;
-
     private Timeline simLoop;
     private GraphicsContext gc;
     private Engine engine;
-    private ArrayList<Double> wallPos = new ArrayList<>(2);
+    private ArrayList<Double> walls = new ArrayList<>(2);
 
 
     @FXML
@@ -66,15 +60,15 @@ public class WindowController implements Initializable {
     @FXML
     public Label logInfo;
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        simChosen = "Default1";
+        simChosen = "Default";
         engine = Initializer.createEngine(this.simBuilder, simChosen);
         map = engine.getMap();
 
-        wallPos.clear();
+        walls.clear();
         destination = new Point(600,200);//Configuration.DEFAULT_DESTINATION_POSITION;
-        scaleValue = Configuration.SCALE_VALUE;
         fps = Configuration.INITIAL_FPS;
 
 
@@ -90,21 +84,18 @@ public class WindowController implements Initializable {
 
         btnPlayPause.setText("Play");
 
-        setSliderListener();
-        setCbSymListener();
-        setCanvasListener();
-        setCbActionListener();
+        cbSimulationsListener();
 
         drawSimulation();
 
     }
 
 
-    private void setCbSymListener() {
+    private void cbSimulationsListener() {
         cbSimulations.valueProperty().addListener((ov, old_val, new_val) -> {
             for (String s : simBuilder.getSimulationList()) {
                 if (s.equals(new_val)) {
-                    changeSymType(s);
+                    changeSimulation(s);
                     //pedestriansFactory = new PedestriansFactory();
                     break;
                 }
@@ -112,7 +103,7 @@ public class WindowController implements Initializable {
         });
     }
 
-    private void changeSymType(String symType) {
+    private void changeSimulation(String symType) {
         simLoop.pause();
         btnPlayPause.setText("Start");
         btnNextFrame.setDisable(false);
@@ -123,10 +114,8 @@ public class WindowController implements Initializable {
         List<Human> humans = map.getHumans();
         if (humans.size() > 0) {
             destination = engine.getMap().getHumans().get(0).getDestination();
-        } else {
-            destination = Configuration.DEFAULT_DESTINATION_POSITION;
         }
-        clearBoard();
+        gc.clearRect(0, 0, board.getWidth(), board.getHeight());
         drawSimulation();
     }
 
@@ -203,7 +192,7 @@ public class WindowController implements Initializable {
                 System.out.println(posX + " x " + posY);
                 System.out.println("Click to choose human location");
                 logInfo.setText("Click to choose human location");
-                setPedestrian(posX, posY);
+                setHuman(posX, posY);
 
             });
 
@@ -229,24 +218,24 @@ public class WindowController implements Initializable {
             cbSimulations.setDisable(true);
             btnClear.setDisable(true);
             System.out.println("Click to choose beginning of the wall");
-            System.out.println(tbAddWall.getToggleGroup());
+            //System.out.println(tbAddWall.getToggleGroup());
             logInfo.setText("Click to choose beginning of the wall");
             board.setOnMouseClicked(event -> {
-                System.out.println("Count before: " + count);
+                //System.out.println("Count before: " + count);
                 count++;
-                System.out.println("Count after: " + count);
+                //System.out.println("Count after: " + count);
 
                 double posX = event.getX();
                 double posY = event.getY();
 
                 System.out.println(posX + " x " + posY);
 
-                if (wallPos.isEmpty()) {
-                    wallPos.add(0, posX);
-                    wallPos.add(1, posY);
+                if (walls.isEmpty()) {
+                    walls.add(0, posX);
+                    walls.add(1, posY);
                 }
-                double posX1 = wallPos.get(0);
-                double posY1 = wallPos.get(1);
+                double posX1 = walls.get(0);
+                double posY1 = walls.get(1);
                 System.out.println(posX1 + " x " + posY1);
                 if ((posX1 != posX) || (posY1 != posY)) {
                     if (count==2){
@@ -300,11 +289,10 @@ public class WindowController implements Initializable {
     private KeyFrame getNextFrame(Duration duration) {
         return new KeyFrame(duration, e -> {
             try {
-                clearBoard();
-                drawAxis();
+                gc.clearRect(0, 0, board.getWidth(), board.getHeight());
                 System.out.print("");
-                drawMap(map);
-                drawPedestrians(engine.getMap().getHumans());
+                drawBoard(map);
+                drawHuman(engine.getMap().getHumans());
                 drawDestination();
                 engine.nextState();
 
@@ -314,22 +302,11 @@ public class WindowController implements Initializable {
         });
     }
 
-    private void setCanvasListener() {
-    }
-
-    private void setSliderListener() {
-    }
-
-    private void setCbActionListener() {
-    }
-
     private void drawSimulation() {
         initBoard();
-        buildAndSetUpSimulationLoop(this.fps);
-
-        drawAxis();
-        drawMap(map);
-        drawPedestrians(engine.getMap().getHumans());
+        initLoop(this.fps);
+        drawBoard(map);
+        drawHuman(engine.getMap().getHumans());
         drawDestination();
     }
 
@@ -341,16 +318,8 @@ public class WindowController implements Initializable {
         board.setScaleY(-1); // Down -> Up ASC
     }
 
-    private void drawAxis() {
-        gc.strokeLine(0, 1, 800, 1);
-        gc.strokeLine(1, 0, 1, 600);
-    }
 
-    private void clearBoard() {
-        gc.clearRect(0, 0, board.getWidth(), board.getHeight());
-    }
-
-    private void buildAndSetUpSimulationLoop(int fps) {
+    private void initLoop(int fps) {
         Duration duration = Duration.millis(1000 / (float) fps);
         KeyFrame frame = getNextFrame(duration);
         simLoop = new Timeline();
@@ -360,34 +329,29 @@ public class WindowController implements Initializable {
     }
 
     private void drawDestination() {
-        double x = destination.getX(); //scale
-        double y = destination.getY(); //scale
+        double x = destination.getX();
+        double y = destination.getY();
         gc.setFill(Color.BLACK);
         gc.fillArc(x, y, 5, 5, 0, 360, ArcType.ROUND);
     }
 
-    private void drawPedestrians(List<Human> humans) {
+    private void drawHuman(List<Human> humans) {
         for (Human h : humans) {
 
-            Color pedestrianColor = getPedestrianColor(
+            Color pedestrianColor = getPressureColor(
                     h.getCrowdPressure()
             );
 
             gc.setFill(pedestrianColor);
-            double x = h.getPosition().getX(); //scale
-            double y = h.getPosition().getY(); //scale
-            double radius = h.getRadius(); //scale
-            if(Configuration.SHOW_VISION_RADIUS){
-                double vision = h.getRangeOfView(); //scale
-                gc.strokeOval(x - vision, y - vision, vision * 2, vision * 2);
-            }
-
+            double x = h.getPosition().getX();
+            double y = h.getPosition().getY();
+            double radius = h.getRadius();
 
             gc.fillArc(x-radius*5, y-radius*5, radius*10, radius*10, 0, 360, ArcType.OPEN);
         }
     }
 
-    private Color getPedestrianColor(double x) {
+    private Color getPressureColor(double x) {
         double red=0.0;
         double green=0.0;
         if (x > 0.5) {
@@ -402,7 +366,7 @@ public class WindowController implements Initializable {
             green = 1.0;
         }
 
-        return new Color(red, green, COLOR_BLUE, COLOR_OPACITY);
+        return new Color(red, green, 0.0, 1.0);
     }
 
     private void setWall(Point pos1, Point pos2) {
@@ -410,20 +374,18 @@ public class WindowController implements Initializable {
         List<Wall> currentWalls = map.getWalls();
         currentWalls.add(newWall);
         map = new Board(800, 600, map.getHumans(), currentWalls);
-        drawMap(map);
-        System.out.println("Wall created...");
-        wallPos.clear();
+        drawBoard(map);
+        System.out.println("Wall placed");
+        walls.clear();
     }
 
-    private void setPedestrian(double posX, double posY) {
+    private void setHuman(double posX, double posY) {
         gc.fillArc(posX, posY, 5, 5, 0, 360, ArcType.OPEN);
-
-        Human h = new Human(this.map,this.map.getHumans().size() + 1, 360, 2, Math.PI / 2, 5000, 0.5, new Point(600,200), new Point(posX, posY));
+        Human h = new Human(this.map,this.map.getHumans().size() + 1, 360, 2, Math.PI / 8, 40, 0.5, new Point(600,200), new Point(posX, posY));
         this.map.addHuman(h);
-        System.out.println("new Pedestrian (ID, Position, Destination): " + h.getId() + h.getPosition() + h.getDestination());
     }
 
-    private void drawMap(Board map) {
+    private void drawBoard(Board map) {
         for (Wall w : map.getWalls()) {
             Point start = w.getStartPosition();
             Point end = w.getEndPosition();
