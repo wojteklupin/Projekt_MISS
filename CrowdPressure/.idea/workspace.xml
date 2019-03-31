@@ -2,53 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="447847d7-a75c-4390-bcc4-6d6755e9d539" name="Default Changelist" comment="Huge commit">
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/Geometry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/MinDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/MapBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/Wall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Model/Collisions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Model/Forces.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Model/RandomCollisions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Symulation/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Symulation/Initializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Initializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/MapBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Configuration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/BoardBuilders/HumanBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/BoardBuilders/MapBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Force.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Wall.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/RunConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Collisions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/CrowdPressure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Force.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Forces.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LinePointAngle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LineTwoPoints.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/Vector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/exceptions/AngleOutOfRangeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/DirectionInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/MinimumDistance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/map/Wall.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Initializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MapBuilder.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,19 +61,19 @@
           <entry key="JAVA/CrowdPressure" value="1" />
           <entry key="MODULES/mdl-CrowdPressure" value="1" />
           <entry key="class" value="2" />
-          <entry key="fxml" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="java" value="185" />
+          <entry key="fxml" value="2" />
+          <entry key="gitignore" value="2" />
+          <entry key="java" value="187" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="185" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="JAVA" value="187" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="UML" value="2" />
-          <entry key="XML" value="5" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -156,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Human.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -176,8 +132,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Geometry/Direction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+              <folding>
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -386,7 +346,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548090242546" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554066105964" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -468,6 +428,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -576,7 +538,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152619000" />
+    <option name="totallyTimeSpent" value="153034000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -749,7 +711,7 @@
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Human.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -759,14 +721,18 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Geometry/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
