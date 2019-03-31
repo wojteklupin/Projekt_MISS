@@ -1,6 +1,7 @@
 package CrowdPressure;
 
-import CrowdPressure.model.Board;
+import CrowdPressure.Symulation.Engine;
+import CrowdPressure.Map.Board;
 
 public class Initializer {
 
