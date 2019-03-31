@@ -1,7 +1,6 @@
-package CrowdPressure.calculators.figures;
+package CrowdPressure.Geometry;
 
-import CrowdPressure.Point;
-import CrowdPressure.calculators.Geometry;
+import CrowdPressure.Map.Point;
 
 public class Vector {
 	private double x;
@@ -58,7 +57,7 @@ public class Vector {
 		this.y = coords.getY();
 
 		this.value = Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
-		this.angle = Geometry.calculateAngle(new Point(0,0), new Point(this.x, this.y));
+		this.angle = Geometry.angleBetween(new Point(0,0), new Point(this.x, this.y));
 	}
 
 	public double getX() {

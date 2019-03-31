@@ -1,11 +1,10 @@
-package CrowdPressure.calculators;
+package CrowdPressure.Model;
 
-import CrowdPressure.calculators.figures.LineTwoPoints;
-import CrowdPressure.calculators.figures.Vector;
-import CrowdPressure.model.map.Wall;
-import CrowdPressure.model.pedestrian.Human;
+import CrowdPressure.Geometry.Geometry;
+import CrowdPressure.Geometry.Vector;
+import CrowdPressure.Map.Wall;
+import CrowdPressure.Human;
 
-import javax.xml.crypto.dom.DOMCryptoContext;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -44,7 +43,7 @@ public class Forces {
 
         for(Wall w : this.human.getBoard().getWalls()){
             double force = 5000 * this.g(w);
-            Optional<Vector> forceVector = Geometry.vectorStraightPoint(this.human.getPosition(), new LineTwoPoints(w.getStartPosition(), w.getEndPosition()));
+            Optional<Vector> forceVector = Geometry.vectorStraightPoint(this.human.getPosition(), w.getStartPosition(), w.getEndPosition());
             if(forceVector.isPresent() && force > 0) {
                 forceVector.get().setValue(force);
                 wallForces.add(forceVector.get());
@@ -67,7 +66,7 @@ public class Forces {
     private double g(Wall w){
 
         double r = this.human.getRadius();
-        Optional<Vector> force = Geometry.vectorStraightPoint(this.human.getPosition(), new LineTwoPoints(w.getStartPosition(), w.getEndPosition()));
+        Optional<Vector> force = Geometry.vectorStraightPoint(this.human.getPosition(), w.getStartPosition(), w.getEndPosition());
 
         if (force.isPresent()) {
             return r - force.get().getValue() > 0 ? human.getRadius() - force.get().getValue() : 0;

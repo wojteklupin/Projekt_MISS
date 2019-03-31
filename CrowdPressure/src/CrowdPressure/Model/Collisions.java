@@ -1,13 +1,12 @@
-package CrowdPressure.calculators;
+package CrowdPressure.Model;
 
-import CrowdPressure.calculators.figures.LinePointAngle;
-import CrowdPressure.calculators.figures.LineTwoPoints;
-import CrowdPressure.calculators.figures.Vector;
-import CrowdPressure.model.Board;
-import CrowdPressure.model.MinimumDistance;
-import CrowdPressure.model.map.Wall;
-import CrowdPressure.model.pedestrian.Human;
-import CrowdPressure.Point;
+import CrowdPressure.Geometry.Geometry;
+import CrowdPressure.Geometry.Vector;
+import CrowdPressure.Map.Board;
+import CrowdPressure.Geometry.MinDistance;
+import CrowdPressure.Map.Wall;
+import CrowdPressure.Human;
+import CrowdPressure.Map.Point;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,19 +24,20 @@ public class Collisions {
         this.board = p.getBoard();
     }
 
-    public Double calculateWallCollisionDistance(){
+    public Optional<Double> calculateWallCollisionDistance(){
         double minDistance = this.human.getRangeOfView();
 
         for(Wall w : this.board.getWalls()){
-            Optional<Point> pointOfCrossing = Geometry.crossPointTwoLines(new LinePointAngle(this.human.getPosition(), alpha), new LineTwoPoints(w.getStartPosition(), w.getEndPosition()));
+            Optional<Point> pointOfCrossing = Geometry.pointOfCrossing(this.human.getPosition(), alpha, w.getStartPosition(), w.getEndPosition());
             if(pointOfCrossing.isPresent()){
                 if(pointOfCrossing.get().distance(this.human.getPosition()) < minDistance){
                     minDistance = pointOfCrossing.get().distance(this.human.getPosition());
+                    return Optional.of(minDistance);
                 }
             }
         }
 
-        return minDistance;
+        return Optional.empty();
     }
 
     public double calculatePedestrianCollisionDistance(){
@@ -91,18 +91,23 @@ public class Collisions {
         return minDistance;
     }
 
-    public MinimumDistance calculateCollisionDistance(){ //dwie powyższe zrobić prywatne, używać tylko tej
-        double walldistance = this.calculateWallCollisionDistance();
-        double pedestriandistance = this.calculatePedestrianCollisionDistance();
-        double comparableValue = walldistance < pedestriandistance ? walldistance : pedestriandistance;
-        double finalDistance = this.human.getRangeOfView() > comparableValue ? comparableValue : this.human.getRangeOfView();
+    public MinDistance calculateCollisionDistance(){
 
-        if(walldistance == finalDistance && walldistance != this.human.getRangeOfView()){
-            return new MinimumDistance(finalDistance, Optional.of(finalDistance));
+        Optional<Double> walldistance = this.calculateWallCollisionDistance();
+        double pedestriandistance = this.calculatePedestrianCollisionDistance();
+        double rangeOfView = this.human.getRangeOfView();
+
+        double minDistance = rangeOfView;
+        minDistance = minDistance > pedestriandistance ? pedestriandistance : minDistance;
+
+        if(walldistance.isPresent()){
+            minDistance = minDistance > walldistance.get() ? walldistance.get() : minDistance;
+            return new MinDistance(minDistance, walldistance);
         }
         else{
-            return new MinimumDistance(finalDistance, Optional.empty());
+            return new MinDistance(minDistance, Optional.empty());
         }
+
     }
 
     public void setAlpha(double alpha) {

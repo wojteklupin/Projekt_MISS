@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="447847d7-a75c-4390-bcc4-6d6755e9d539" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Force.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/Collisions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/CrowdPressure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/Force.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/Forces.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LinePointAngle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LineTwoPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/exceptions/AngleOutOfRangeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/model/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/model/DirectionInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/model/MinimumDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/model/map/Wall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Initializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MapBuilder.java" afterDir="false" />
+    <list default="true" id="447847d7-a75c-4390-bcc4-6d6755e9d539" name="Default Changelist" comment="Huge commit">
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/Geometry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/MinDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Geometry/Vector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/MapBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Map/Wall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Model/Collisions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Model/Forces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Model/RandomCollisions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Symulation/Engine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CrowdPressure/Symulation/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dokumentacja.md" beforeDir="false" afterPath="$PROJECT_DIR$/Dokumentacja.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/CalcEngine/PedestrianCalc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Exceptions/Exc1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Wall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Configuration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Engine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/BoardBuilders/HumanBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/BoardBuilders/MapBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Force.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Handlers/Wall.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CrowdPressure/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/RunConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Collisions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/CrowdPressure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Force.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Forces.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LinePointAngle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LineTwoPoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/Vector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/exceptions/AngleOutOfRangeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/DirectionInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/MinimumDistance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/map/Wall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Initializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MapBuilder.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,23 +80,23 @@
     <session id="1923498554">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="33" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="12" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="37" />
+          <entry key="project.opened" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -88,15 +106,16 @@
           <entry key="MODULES/mdl-CrowdPressure" value="1" />
           <entry key="class" value="2" />
           <entry key="fxml" value="1" />
-          <entry key="java" value="195" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="185" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="195" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="185" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="UML" value="2" />
           <entry key="XML" value="5" />
         </counts>
@@ -104,14 +123,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="21" />
-          <entry key="java" value="30284" />
+          <entry key="java" value="30285" />
           <entry key="txt" value="363" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="30284" />
+          <entry key="JAVA" value="30285" />
           <entry key="PLAIN_TEXT" value="384" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -119,10 +143,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="645">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Human.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,56 +165,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LinePointAngle.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LineTwoPoints.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/Vector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1604#1605#0" expanded="true" />
-                <element signature="e#1629#1630#0" expanded="true" />
-                <element signature="e#1715#1716#0" expanded="true" />
-                <element signature="e#1740#1741#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java">
+        <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Geometry/Direction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -197,11 +194,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ToggleButton</find>
-      <find>rotatePoint</find>
-      <find>centralPo</find>
-      <find>direction</find>
-      <find>isBi</find>
       <find>calculateA</find>
       <find>thr</find>
       <find>Exception</find>
@@ -225,7 +217,13 @@
       <find>checkIfPointIsInBetween</find>
       <find>new Vec</find>
       <find>getForcesValue</find>
-      <find>Line</find>
+      <find>getPedestrianColor</find>
+      <find>descale</find>
+      <find>destination</find>
+      <find>radius</find>
+      <find>red</find>
+      <find>COLOR_BLUE</find>
+      <find>getRadius</find>
     </findStrings>
     <replaceStrings>
       <replace>Button</replace>
@@ -233,9 +231,17 @@
       <replace>StraightWall</replace>
       <replace>lineContainsPoint</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\kErni-PC\Desktop\Crowd_JOIN\Projekt_MISS\CrowdPressure\src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -246,8 +252,6 @@
         <option value="$PROJECT_DIR$/src/Point.java" />
         <option value="$PROJECT_DIR$/src/Wall.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/Point.java" />
-        <option value="$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml" />
-        <option value="$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/Handlers/Board.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/Handlers/Wall.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java" />
@@ -271,21 +275,25 @@
         <option value="$PROJECT_DIR$/src/CrowdPressure/model/MinimumDistance.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/VectorXY.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCrossPoints.java" />
-        <option value="$PROJECT_DIR$/src/CrowdPressure/Configuration.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Pedestrian.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/figures/Vector.java" />
-        <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/model/Environment.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/Collisions.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/Force.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/model/Board.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/Forces.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCalculator.java" />
-        <option value="$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Human.java" />
         <option value="$PROJECT_DIR$/src/Engine.java" />
+        <option value="$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml" />
         <option value="$PROJECT_DIR$/src/MapBuilder.java" />
-        <option value="$PROJECT_DIR$/src/Initializer.java" />
         <option value="$PROJECT_DIR$/src/CrowdPressure/Main.java" />
+        <option value="$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Human.java" />
+        <option value="$PROJECT_DIR$/src/CrowdPressure/Engine.java" />
+        <option value="$PROJECT_DIR$/src/CrowdPressure/MapBuilder.java" />
+        <option value="$PROJECT_DIR$/src/CrowdPressure/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java" />
+        <option value="$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java" />
+        <option value="$PROJECT_DIR$/src/Initializer.java" />
       </list>
     </option>
   </component>
@@ -302,10 +310,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="460" />
-    <option name="y" value="69" />
-    <option name="width" value="1172" />
-    <option name="height" value="979" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -313,7 +321,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,11 +334,6 @@
             <path>
               <item name="CrowdPressure" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CrowdPressure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -342,14 +347,7 @@
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
-              <item name="calculators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CrowdPressure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+              <item name="Geometry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CrowdPressure" type="b2602c69:ProjectViewProjectNode" />
@@ -363,42 +361,44 @@
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
-              <item name="Handlers" type="462c0819:PsiDirectoryNode" />
+              <item name="Map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CrowdPressure" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CrowdPressure" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="CrowdPressure" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="pedestrian" type="462c0819:PsiDirectoryNode" />
+              <item name="Symulation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548105582372" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Pulpit/Crowd-Pressure-master" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548090242546" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="CrowdPressure" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -414,7 +414,9 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -440,12 +442,14 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -514,7 +518,10 @@
       <workItem from="1547842627909" duration="118000" />
       <workItem from="1548001613702" duration="27096000" />
       <workItem from="1548063942236" duration="11379000" />
-      <workItem from="1548086136845" duration="6109000" />
+      <workItem from="1548086136845" duration="4174000" />
+      <workItem from="1548405845532" duration="85000" />
+      <workItem from="1554064374736" duration="298000" />
+      <workItem from="1554064772066" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="Little update">
       <created>1544819259302</created>
@@ -558,74 +565,88 @@
       <option name="project" value="LOCAL" />
       <updated>1545076119055</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Huge commit">
+      <created>1548104936787</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1548104936787</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153862000" />
+    <option name="totallyTimeSpent" value="152619000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20704375" />
-      <window_info id="Structure" order="1" weight="0.2497332" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25208333" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32906976" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.4744186" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32847276" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32842582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3998465" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32906976" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.30581397" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32906976" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32906976" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292402" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32842582" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32977587" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32977587" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32977587" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="SciView" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23692636" />
-      <window_info id="Structure" order="1" weight="0.2497332" />
-      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32906976" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994664" weight="0.4744186" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32906976" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053364" side_tool="true" weight="0.30581397" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32906976" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32906976" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.2497332" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32977587" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32977587" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info id="Structure" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.3292402" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.3292402" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Maven Projects" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,317 +661,112 @@
     <MESSAGE value="Zacząłem coś pisać, jakieś podstawowe potrzebne funkcje z zakresu geometrii i zacząłem pracować nad funkcją do wyznaczenia kierunku następnego kroku, ale to dopiero początek." />
     <MESSAGE value="Kontynuuje pisanie, te puste funkcje też dopiszę za jakieś mniej więcej 2 godziny." />
     <MESSAGE value="nowe funkcje" />
-    <option name="LAST_COMMIT_MESSAGE" value="nowe funkcje" />
+    <MESSAGE value="Huge commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Huge commit" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Pedestrian.java" />
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/CalcEngine/PedestrianCalc.java" />
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Exceptions/Exc1.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/HumanValues.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../io/IO">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Force.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Force.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/HumanForce.java" />
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="126" selection-start-line="17" selection-start-column="126" selection-end-line="17" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Wall.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Human.java" />
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/builders/MapFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/builders/PedestriansFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/VariableInformation.java" />
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="576" selection-start-line="576" selection-end-line="576" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/jfxrt.jar!/com/sun/javafx/application/LauncherImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MODULES/mdl-CrowdPressure">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MODULES</ID>
-          <OriginalElement>mdl-CrowdPressure</OriginalElement>
-          <nodes>
-            <node x="" y="">mdl-CrowdPressure</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="100.0" y="16.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/CrowdPressure">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>CrowdPressure</OriginalElement>
-          <nodes>
-            <node x="" y="">CrowdPressure.Engine</node>
-            <node x="" y="">CrowdPressure.Main</node>
-            <node x="" y="">CrowdPressure.Point</node>
-            <node x="" y="">CrowdPressure.GUI</node>
-            <node x="" y="">CrowdPressure.model</node>
-            <node x="" y="">CrowdPressure.Configuration</node>
-            <node x="" y="">CrowdPressure.Handlers</node>
-            <node x="" y="">CrowdPressure.exceptions</node>
-            <node x="" y="">CrowdPressure.calculators</node>
-            <node x="" y="">CrowdPressure.RunConfig</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="194.0" y="168.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class" />
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/ext/jfxrt.jar!/com/sun/javafx/application/LauncherImpl.class" />
+    <entry file="uml://MODULES/mdl-CrowdPressure" />
+    <entry file="uml://JAVA/CrowdPressure" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/DestinationDistanceCalculatorInfo.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/DestinationDistance.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/WallCrossPoint.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/Position.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCrossPoints.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LinePointAngle.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/map/Wall.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/DirectionInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LineTwoPoints.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/CollisionDistance.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Board.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/Vector.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/MinimumDistance.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/map/Map.java" />
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Initializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LineTwoPoints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Collisions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/CrowdPressure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Forces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Force.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/LinePointAngle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/DirectionInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/MinimumDistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/map/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="80" column="89" lean-forward="true" selection-start-line="80" selection-start-column="89" selection-end-line="80" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/Board.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Force.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/GUI/BoardBuilders/HumanBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/GUI/BoardBuilders/MapBuilder.java" />
     <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="-6">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/figures/Vector.java">
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Collisions.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/PedestrianCalculator.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/exceptions/AngleOutOfRangeException.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/RunConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/model/pedestrian/Human.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/GUI/WindowController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        <state relative-caret-position="5640">
+          <caret line="403" selection-start-line="403" selection-end-line="403" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1629#1630#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#5345#5346#0" expanded="true" />
+            <element signature="e#5405#5406#0" expanded="true" />
+            <element signature="e#10984#10985#0" expanded="true" />
+            <element signature="e#11055#11056#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java">
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/CrowdPressure.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Forces.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/calculators/Geometry.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Point.java" />
+    <entry file="file://$PROJECT_DIR$/src/Initializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Configuration.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/MapBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Initializer.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Engine.java" />
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/GUI/Window.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state relative-caret-position="645">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Handlers/Geometry.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CrowdPressure/Geometry/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1011,7 +827,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
