@@ -1,5 +1,8 @@
 package CrowdPressure;
 
+import CrowdPressure.model.Board;
+import CrowdPressure.model.map.Wall;
+import CrowdPressure.model.pedestrian.Human;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +11,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -42,7 +47,25 @@ public class Main extends Application {
 
         launch(args);
 
-
+/*
+        System.out.println("Test 1: \n-------");
+        List<Wall> walls = new ArrayList<>();
+        walls.add(new Wall(new Point(5, 1.5), new Point(5, 2.5)));
+        walls.add(new Wall(new Point(5, 2.5), new Point(6, 2.5)));
+        walls.add(new Wall(new Point(2,2), new Point(3,3)));
+        walls.add(new Wall(new Point(6,6), new Point(6,2.5)));
+        List<Human> humans = new ArrayList<>();
+        Board e = new Board(6, 6, humans, walls);
+        e.addHuman(new Human(e, 1, 90, 2, Math.PI / 4, 5, 0.5, new Point(6,2), new Point(1,5)));
+        Human p = e.getHumans().get(0);
+        e.addHuman(new Human(e, 2, 100, 0, Math.PI / 4, 5, 0.2, new Point(6,2), new Point(2.736022, 4.00691)));
+        int counter = 0;
+        while(counter < 5){
+            System.out.println(p);
+            p.nextStep();
+            counter += 1;
+        }
+*/
 
 
     }

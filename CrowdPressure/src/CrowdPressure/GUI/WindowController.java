@@ -1,13 +1,9 @@
 package CrowdPressure.GUI;
 
 import CrowdPressure.*;
-import CrowdPressure.Map.Board;
-import CrowdPressure.Map.MapBuilder;
-import CrowdPressure.Map.Point;
-import CrowdPressure.Map.Wall;
-import CrowdPressure.Human;
-import CrowdPressure.Symulation.Engine;
-import CrowdPressure.Symulation.Initializer;
+import CrowdPressure.model.Board;
+import CrowdPressure.model.map.Wall;
+import CrowdPressure.model.pedestrian.Human;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -32,7 +28,7 @@ import java.util.*;
 public class WindowController implements Initializable {
 
     private int count=0;
-    private int fps = 90;
+    private int fps;
     private MapBuilder simBuilder = new MapBuilder();
     private Point destination;
     private Board map;
@@ -72,7 +68,8 @@ public class WindowController implements Initializable {
         map = engine.getMap();
 
         walls.clear();
-        destination = new Point(600,200);
+        destination = new Point(600,200);//Configuration.DEFAULT_DESTINATION_POSITION;
+        fps = Configuration.INITIAL_FPS;
 
 
         logInfo.setText("Welcome to Crowd Pressure simulation!");
@@ -99,6 +96,7 @@ public class WindowController implements Initializable {
             for (String s : simBuilder.getSimulationList()) {
                 if (s.equals(new_val)) {
                     changeSimulation(s);
+                    //pedestriansFactory = new PedestriansFactory();
                     break;
                 }
             }
@@ -383,9 +381,7 @@ public class WindowController implements Initializable {
 
     private void setHuman(double posX, double posY) {
         gc.fillArc(posX, posY, 5, 5, 0, 360, ArcType.OPEN);
-
-        Human h = new Human(this.map,this.map.getHumans().size() + 1, 360, 2, Math.PI / 16, 5000, 0.5, new Point(600,200), new Point(posX, posY));
-
+        Human h = new Human(this.map,this.map.getHumans().size() + 1, 360, 2, Math.PI / 8, 40, 0.5, new Point(600,200), new Point(posX, posY));
         this.map.addHuman(h);
     }
 
@@ -393,7 +389,7 @@ public class WindowController implements Initializable {
         for (Wall w : map.getWalls()) {
             Point start = w.getStartPosition();
             Point end = w.getEndPosition();
-            gc.strokeLine(start.getX(), start.getY(), end.getX(), end.getY());
+            gc.strokeLine(start.getX(), start.getY(), end.getX(), end.getY()); //scale
         }
     }
 }
