@@ -1,21 +1,20 @@
-package CrowdPressure.model.pedestrian;
+package CrowdPressure;
 
 import java.util.List;
 
-import CrowdPressure.Configuration;
-import CrowdPressure.Point;
-import CrowdPressure.calculators.Forces;
-import CrowdPressure.calculators.Geometry;
-import CrowdPressure.calculators.PedestrianCalculator;
-import CrowdPressure.calculators.figures.Vector;
-import CrowdPressure.model.DirectionInfo;
-import CrowdPressure.model.Board;
+import CrowdPressure.Map.Point;
+import CrowdPressure.Model.Forces;
+import CrowdPressure.Geometry.Geometry;
+import CrowdPressure.Model.RandomCollisions;
+import CrowdPressure.Geometry.Vector;
+import CrowdPressure.Geometry.Direction;
+import CrowdPressure.Map.Board;
 
 
 public class Human {
 
 	private Board board;
-	private PedestrianCalculator pedestrianCalculator;
+	private RandomCollisions randomCollisions;
 	private int id;
 	private double mass;
 	private double radius;
@@ -47,40 +46,41 @@ public class Human {
 		this.destination = destination;
 		this.position = position;
 		this.nextPosition = position;
-		this.destinationAngle = Geometry.calculateAngle(nextPosition, destination);
+		this.destinationAngle = Geometry.angleBetween(nextPosition, destination);
 		this.desiredSpeed = new Vector(desiredDirection, 0);
 		this.desiredAcceleration = new Vector(Double.NaN, 0.0);
 		this.crowdPressure = 1.0;
-		this.finished = Geometry.isBigger(position.distance(destination), Configuration.MAX_DISTANCE_TO_GOAL);
+		this.finished = position.distance(destination) < 1.8;
 		this.desiredDirection = visionCenter;
-		this.pedestrianCalculator = new PedestrianCalculator(this, board);
+		this.randomCollisions = new RandomCollisions(this);
 	}
 
 	public void nextStep(){
-		
-		
-		DirectionInfo desiredDirectionInfo = pedestrianCalculator.getDirectionInfo();
-		System.out.println(desiredDirectionInfo.getAlpha());
+		if(!this.isFinished()) {
+			Direction desiredDirectionInfo = randomCollisions.getDirections();
 
-		Forces forcesCalc = new Forces(this);
+			Forces forcesCalc = new Forces(this);
 
-		double velocity = Math.min(this.comfortableSpeed, desiredDirectionInfo.getCollisionDistance().getMinimumDistance() / Human.relaxationTime); //była jeszcze prędkość z odległóścią od przeszkody
-				Vector desiredVelocity = new Vector(desiredDirectionInfo.getAlpha(), velocity);
+			double velocity = Math.min(this.comfortableSpeed, desiredDirectionInfo.getCollisionDistance() / Human.relaxationTime);
+			Vector desiredVelocity = new Vector(desiredDirectionInfo.getAlpha(), velocity);
 
-		List<Vector> forces = forcesCalc.calculateForces(); //pedestrianCalculator.getForces();
-		double forcesValue = forcesCalc.sumForcesValues(forces); //pedestrianCalculator.getForcesValue(forces);
-		Vector desiredAcceleration = this.calculateAcceleration(desiredVelocity, forces);
-		this.desiredDirection = desiredDirectionInfo.getAlpha();
-		this.desiredSpeed = desiredVelocity;
-		this.desiredAcceleration = desiredAcceleration;
-		this.nextPosition = pedestrianCalculator.getNextPosition();
-		this.destinationAngle = Geometry.calculateAngle(this.nextPosition, this.destination);
-		this.crowdPressure = pedestrianCalculator.getCrowdPressure(forcesValue);
-		this.position = this.nextPosition;
-		this.visionCenter = this.desiredDirection;
-		this.finished = Geometry.isBigger(this.position.distance(this.destination), 1.0);
-		System.out.println(this.finished);
+			List<Vector> forces = forcesCalc.calculateForces();
+			double forcesValue = forcesCalc.sumForcesValues(forces);
+			Vector desiredAcceleration = this.calculateAcceleration(desiredVelocity, forces);
+			this.desiredDirection = desiredDirectionInfo.getAlpha();
+			this.desiredSpeed = desiredVelocity;
+			this.desiredAcceleration = desiredAcceleration;
+			this.nextPosition = calculateNextPosition();
+			this.destinationAngle = Geometry.angleBetween(this.nextPosition, this.destination);
+			this.crowdPressure = this.getCrowdPressure(forcesValue);
 
+			this.position = this.nextPosition;
+			this.visionCenter = this.desiredDirection;
+			this.finished = this.position.distance(this.destination) < 1.0;
+		}
+		else{
+			System.out.println("I AM FINISHED, ID: " + this.id);
+		}
 	}
 
 	public double getDestinationDistanceFunction(double alpha, Double collisionDistance) {
@@ -95,14 +95,12 @@ public class Human {
 	public Vector calculateAcceleration(Vector velocity,List<Vector> forces){
 
 		Vector acceleration = Geometry.subtractVectors(velocity, this.desiredSpeed);
-		acceleration.setValue((velocity.getValue() - this.desiredSpeed.getValue()) / Human.relaxationTime);
+		acceleration.setValue(Geometry.subtractVectors(velocity,this.desiredSpeed).getValue() / Human.relaxationTime);
 
 		for (Vector force : forces) {
 			acceleration = Geometry.addVectors(acceleration, force);
 
 		}
-
-
 
 		if (acceleration.getValue() > velocity.getValue()) {
 			acceleration.setValue(velocity.getValue());
@@ -113,6 +111,40 @@ public class Human {
 		}
 
 		return acceleration;
+	}
+
+
+	Point calculateNextPosition(){
+		Vector velocity = this.desiredSpeed;
+		Vector acceleration = this.desiredAcceleration;
+
+		Vector finalForce = velocity;
+
+		Vector shift = finalForce;
+
+		double x = this.position.getX();
+		double y = this.position.getY();
+
+		return new Point(x + shift.getX(), y + shift.getY());
+	}
+
+	public double getCrowdPressure(double forcesValue) {
+
+		double minimalAcceleration = 0.0;
+		double maximalCPValue = 1.0;
+
+		double crowdPressure = 0.0;
+
+		if (forcesValue > minimalAcceleration) {
+			crowdPressure = forcesValue * 3;
+		} else {
+			crowdPressure = 0.0;
+		}
+		if (crowdPressure > maximalCPValue) {
+			crowdPressure = maximalCPValue;
+		}
+
+		return crowdPressure;
 	}
 
 

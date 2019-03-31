@@ -14,14 +14,15 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="CrowdPressure.GUI.WindowController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CrowdPressure.GUI.WindowController">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); -fx-border-color: black;">
-          <Menu mnemonicParsing="false" text="Help">
+         <Menu fx:id="menuInfo" mnemonicParsing="false" onAction="#showInfo" text="FIle">
             <items>
-              <MenuItem fx:id="menuInfo" mnemonicParsing="false" onAction="#showInfo" text="Info" />
+               <MenuItem fx:id="menuInfo" mnemonicParsing="false" onAction="#showInfo" text="Info" />
+               <MenuItem fx:id="menuQuit" mnemonicParsing="false" onAction="#quit" text="Quit" />
             </items>
-          </Menu>
+         </Menu>
       </MenuBar>
       <HBox maxHeight="25.0" minHeight="25.0" prefHeight="25.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to top, #deefff 0%,#98bede 100%); -fx-border-color: black;">
          <children>
@@ -42,7 +43,7 @@
       </BorderPane>
       <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="790.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #deefff 0%,#98bede 100%); -fx-border-color: black;">
          <children>
-            <ToggleButton fx:id="tbPlayPause" mnemonicParsing="false" onAction="#simPlayPause" text="Play/Pause" />
+            <Button fx:id="btnPlayPause" layoutX="131.0" layoutY="20.0" mnemonicParsing="false" onAction="#simPlayPause" text="Play/Pause" />
             <Button fx:id="btnNextFrame" mnemonicParsing="false" onAction="#simNextFrame" text="Next frame" />
             <Region prefHeight="45.0" prefWidth="70.0" />
             <Button fx:id="btnClear" mnemonicParsing="false" onAction="#simClearBoard" text="Clear board" />

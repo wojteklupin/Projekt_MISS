@@ -1,9 +1,8 @@
-package CrowdPressure.model;
+package CrowdPressure.Map;
 
 import java.util.List;
 
-import CrowdPressure.model.map.Wall;
-import CrowdPressure.model.pedestrian.Human;
+import CrowdPressure.Human;
 
 public class Board {
 

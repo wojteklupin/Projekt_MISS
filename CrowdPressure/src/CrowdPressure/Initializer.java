@@ -1,9 +1,7 @@
-import CrowdPressure.model.Board;
-import CrowdPressure.model.pedestrian.Human;
-import org.omg.CORBA.Environment;
+package CrowdPressure;
 
-import java.util.ArrayList;
-import java.util.List;
+import CrowdPressure.Symulation.Engine;
+import CrowdPressure.Map.Board;
 
 public class Initializer {
 

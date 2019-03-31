@@ -1,6 +1,4 @@
-package CrowdPressure.model.map;
-
-import CrowdPressure.Point;
+package CrowdPressure.Map;
 
 public class Wall {
 	private Point startPosition;
