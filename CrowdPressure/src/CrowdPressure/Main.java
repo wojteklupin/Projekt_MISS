@@ -1,8 +1,5 @@
 package CrowdPressure;
 
-import CrowdPressure.model.Board;
-import CrowdPressure.model.map.Wall;
-import CrowdPressure.model.pedestrian.Human;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

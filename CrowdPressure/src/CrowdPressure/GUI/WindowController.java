@@ -1,9 +1,10 @@
 package CrowdPressure.GUI;
 
 import CrowdPressure.*;
-import CrowdPressure.model.Board;
-import CrowdPressure.model.map.Wall;
-import CrowdPressure.model.pedestrian.Human;
+import CrowdPressure.Map.Board;
+import CrowdPressure.Map.Point;
+import CrowdPressure.Map.Wall;
+import CrowdPressure.Human;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -69,7 +70,6 @@ public class WindowController implements Initializable {
 
         walls.clear();
         destination = new Point(600,200);//Configuration.DEFAULT_DESTINATION_POSITION;
-        fps = Configuration.INITIAL_FPS;
 
 
         logInfo.setText("Welcome to Crowd Pressure simulation!");

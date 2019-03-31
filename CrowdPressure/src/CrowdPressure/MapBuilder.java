@@ -1,9 +1,9 @@
 package CrowdPressure;
 
-import CrowdPressure.Point;
-import CrowdPressure.model.Board;
-import CrowdPressure.model.map.Wall;
-import CrowdPressure.model.pedestrian.Human;
+import CrowdPressure.Map.Point;
+import CrowdPressure.Map.Board;
+import CrowdPressure.Map.Wall;
+import CrowdPressure.Human;
 
 import java.util.ArrayList;
 import java.util.List;

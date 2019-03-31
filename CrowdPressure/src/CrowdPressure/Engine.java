@@ -1,7 +1,7 @@
 package CrowdPressure;
 
-import CrowdPressure.model.Board;
-import CrowdPressure.model.pedestrian.Human;
+import CrowdPressure.Map.Board;
+import CrowdPressure.Human;
 
 import java.util.Iterator;
 
